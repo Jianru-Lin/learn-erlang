@@ -1,0 +1,113 @@
+body, p {
+	font-family: Georgia;
+	overflow: auto;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+span.code, span.bold_code {
+	font-family: Consolas;
+	padding: 2px 4px;
+    border-radius: 2px;
+}
+
+span.code:hover, span.bold_code:hover {
+	background-color: #F1F1F1;
+}
+
+span.bold_code {
+	font-weight: normal;
+}
+
+#leftnav, #content {
+	overflow: auto;
+}
+
+#leftnav {
+	width: 350px;
+	border-right: none;
+	padding: 0;
+}
+
+#content {
+	margin-left:0;
+	padding: 0 50px;
+	font-size: 19px;
+	position: absolute;
+	left: 350px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+a {
+	color: #00689B !important;
+}
+
+.warning, .note {
+	border: none;
+	border-radius: 4px;
+}
+
+.note .label {
+	background-color: #009B4D;
+}
+
+.warning .label {
+	background-color: #9B2500;
+}
+
+/* 模块标题 */
+center h1 {
+    letter-spacing: .125em;
+    font-family: Consolas;
+	/*background-color: #00689B;
+	color: white;*/
+	color: inherit;
+	border-radius: 4px;
+}
+
+/* 节标题 */
+h3 {
+	background-color: #00689B;
+	color: white;
+	padding: 5px;
+}
+
+h3 * {
+	color: white !important;
+}
+
+/* 函数 */
+p.function {
+	background-color: #00AA69;
+	color: white;
+	/*border-radius: 4px;*/
+}
+
+p.function a,
+p.function a:hover,
+p.function .code,
+p.function .bold_code {
+	color: inherit !important;
+	background-color: transparent !important;
+}
+
+/* 打印设置 */
+@media print {
+	#leftnav {
+		display: none;
+	}
+	#content {
+		position: static;
+		display: block;
+		margin: 0;
+		padding: 0 50px;
+	}
+   * {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+   }
+}
